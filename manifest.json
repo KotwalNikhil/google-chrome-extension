@@ -1,0 +1,24 @@
+{
+  "name": "Nikhil ka chrome extension",
+  "version": "1.1",
+  "description": "Time for fun and games, know the count of your active tabs",
+  "manifest_version":2,
+  "permissions": ["activeTab","tabs"],
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["content.js"]
+    
+    }
+  ],
+  "background":
+  {
+    "scripts":["background.js"]
+  },
+  "browser_action":{
+    "default_icon":"on.png",
+    "default_title":"Now enjoy games with JS",
+    "default_popup":"popup.html"
+  }
+
+}
